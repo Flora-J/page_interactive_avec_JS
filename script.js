@@ -80,9 +80,47 @@ function nuclearPage() {
 nuclearPage()
 console.log("")
 //Fonctionnalité 6
+let cards = document.getElementsByClassName("card");
+let button_view = document.getElementsByClassName("btn-success");
 
+for(let i = 0; i < cards.length; i++)
+{
+    function view()
+    {
+        if (cards[i].getElementsByClassName("card-text")[0].style.display != "none")
+        {
+            cards[i].getElementsByClassName("card-text")[0].style.display = "none";
+            cards[i].getElementsByClassName("card-img-top")[0].style.width = "20%";
+        }
+        else
+        {
+            cards[i].getElementsByClassName("card-text")[0].style.display = "block";
+            cards[i].getElementsByClassName("card-img-top")[0].style.width = "100%";
+        }
+    }
+    button_view[i].addEventListener("mouseover", view);
+}
 //Fonctionnalité 7
 
 //Fonctionnalité 8
 
 //Fonctionnalité 9
+let logo = document.getElementsByClassName('navbar-brand')[0];
+logo.addEventListener('keypress', function(e) {
+  let body = document.getElementsByTagName('body')[0];
+  body.classList = "";
+  switch (e.key) {
+    case 'a':
+      body.classList.add("col-4");
+      break;
+    case 'b':
+      body.classList = "";
+      break;
+    case 'y':
+      body.classList.add("col-4", "offset-4");
+      break;
+    case 'p':
+      body.classList.add("col-4", "offset-8");
+      break;
+  }
+});
