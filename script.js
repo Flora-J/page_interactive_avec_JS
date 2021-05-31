@@ -14,10 +14,10 @@ function footerAlert2() {
   nombre_de_clic = 1
   footer.addEventListener("click", function() {
       alert("clique n° " + nombre_de_clic)
-      nombre_de_clic+
+      nombre_de_clic++
   })
 }
-footerAlert();
+footerAlert2();
 console.log("");
 //Fonctionnalité 2 :
 function hamburgerMenu() {
@@ -45,7 +45,7 @@ function greenText() {
 	textCardTwo = document.querySelectorAll("div.col-md-4 button.btn-outline-secondary")[1]
 	i = 1
 	editCardButtonTwo.addEventListener("click", function() {
-		i+
+		i++
     if (textCardTwo.style.color === "green")
     {
       textCardTwo.style.color = "";
@@ -64,7 +64,7 @@ function nuclearPage() {
 	bootstrap = document.querySelector("head").querySelector("link")
 	i = 1
 	navbar.addEventListener("dblclick", function () {
-		i+
+		i++
 		if (document.getElementsByTagName("link")[0].rel == "stylesheet")           //if stylesheet is on, we turn it off
     document.getElementsByTagName("link")[0].rel = "styleDisabled";
   else
