@@ -63,8 +63,22 @@ function greenText() {
 greenText()
 console.log("")
 
-//Fonctionnalité 5
+//Fonctionnalité 5 
+function nuclearPage() {
+	navbar = document.querySelector("div.navbar")
+	bootstrap = document.querySelector("head").querySelector("link")
+	i = 1
+	navbar.addEventListener("dblclick", function () {
+		i++
+		if (document.getElementsByTagName("link")[0].rel == "stylesheet")           //if stylesheet is on, we turn it off
+    document.getElementsByTagName("link")[0].rel = "styleDisabled";
+  else
+    document.getElementsByTagName("link")[0].rel = "stylesheet";
+	})
+}
 
+nuclearPage()
+console.log("")
 //Fonctionnalité 6
 
 //Fonctionnalité 7
