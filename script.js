@@ -8,7 +8,6 @@ function footerAlert()
 
 footer.addEventListener("click", footerAlert);
 console.log("");
-
 //fonctionnalité 1 bis :
 function footerAlert2() {
   footer = document.querySelector("footer")
@@ -20,7 +19,6 @@ function footerAlert2() {
 }
 footerAlert2();
 console.log("");
-
 //Fonctionnalité 2 :
 function hamburgerMenu() {
 	menu = document.getElementById("navbarHeader")
@@ -31,7 +29,6 @@ function hamburgerMenu() {
 }
 hamburgerMenu()
 console.log("")
-
 //Fonctionnalité 3
 function redText() {
 	editCardButtonOne = document.querySelectorAll("div.col-md-4")[0]
@@ -42,7 +39,6 @@ function redText() {
 }
 redText()
 console.log("")
-
 //Fonctionnalité 4
 function greenText() {
 	editCardButtonTwo = document.querySelectorAll("div.col-md-4")[1]
@@ -62,7 +58,6 @@ function greenText() {
 }
 greenText()
 console.log("")
-
 //Fonctionnalité 5 
 function nuclearPage() {
 	navbar = document.querySelector("div.navbar")
@@ -100,10 +95,32 @@ for(let i = 0; i < cards.length; i++)
     }
     button_view[i].addEventListener("mouseover", view);
 }
+console.log("")
 //Fonctionnalité 7
+const buttonNext = document.querySelector('main section p a.btn-secondary'); 
+const cards = document.querySelectorAll('div.col-md-4'); 
+const divcards = document.querySelector('div.album div.container div.row');
+let card_1 = divcards.children[0];
+let card_6 = divcards.children[5];
 
+buttonNext.addEventListener('click', function() {   
+  divcards.insertBefore(card_6, card_1);
+  card_1 = divcards.children[0];
+  card_6 = divcards.children[5];
+}); 
+console.log("")
 //Fonctionnalité 8
+const buttonPrevious = document.querySelector('main section p a.btn-primary'); 
+card_1 = divcards.children[0];
+card_6 = divcards.children[5];
 
+buttonPrevious.addEventListener('click', function(event) {   
+  event.preventDefault();            
+  divcards.insertBefore(card_1, card_6.nextElementSibling);
+  card_1 = divcards.children[0];
+  card_6 = divcards.children[5];
+}); 
+console.log("")
 //Fonctionnalité 9
 let logo = document.getElementsByClassName('navbar-brand')[0];
 logo.addEventListener('keypress', function(e) {
