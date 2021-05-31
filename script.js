@@ -98,7 +98,7 @@ for(let i = 0; i < cards.length; i++)
 console.log("")
 //Fonctionnalité 7
 const buttonNext = document.querySelector('main section p a.btn-secondary'); 
-const cards = document.querySelectorAll('div.col-md-4'); 
+const cards2 = document.querySelectorAll('div.col-md-4'); 
 const divcards = document.querySelector('div.album div.container div.row');
 let card_1 = divcards.children[0];
 let card_6 = divcards.children[5];
