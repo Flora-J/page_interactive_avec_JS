@@ -22,39 +22,47 @@ footerAlert2();
 console.log("");
 
 //Fonctionnalité 2 :
-let hamburgerMenu = document.getElementById("navbarHeader");
-let btn = document.querySelector(".navbar-toggler-icon");
-
-function openOrCloseMenu() 
-{
-    hamburgerMenu.classList.toggle("collapse");
+function hamburgerMenu() {
+	menu = document.getElementById("navbarHeader")
+	hambuger = document.querySelector(".navbar-toggler-icon")
+	hambuger.addEventListener("click", function () {
+		menu.classList.toggle("collapse")
+	})
 }
-
-btn.addEventListener("click", openOrCloseMenu);
-console.log("");
+hamburgerMenu()
+console.log("")
 
 //Fonctionnalité 3
-const card1 = document.querySelectorAll('div.col-md-4')[0]; 
-const editCard1 = document.querySelector('div.col-md-4 button.btn-outline-secondary')[0]; 
-editCard1.addEventListener('click', function() {     
-  card1.style.color = "red";
-  editCard1.style.color = "red";
-});
+function redText() {
+	editCardButtonOne = document.querySelectorAll("div.col-md-4")[0]
+	textCardOne = document.querySelectorAll("div.col-md-4 button.btn-outline-secondary")[0]
+	editCardButtonOne.addEventListener("click", function() {
+    textCardOne.style.color = "red"
+	})
+}
+redText()
 console.log("")
 
 //Fonctionnalité 4
-const card2 = document.querySelectorAll('div.col-md-4')[1]; 
-const editCard2 = document.querySelectorAll('div.col-md-4 button.btn-outline-secondary')[1]; 
-function colorGreen() 
-{
-if (secondCard.style.color === 'green'){
-  secondCard.style.color = 'black' ;
-  }else {
-    secondCard.style.color === 'green' 
-  }
+function greenText() {
+	editCardButtonTwo = document.querySelectorAll("div.col-md-4")[1]
+	textCardTwo = document.querySelectorAll("div.col-md-4 button.btn-outline-secondary")[1]
+	i = 1
+	editCardButtonTwo.addEventListener("click", function() {
+		i++
+    if (textCardTwo.style.color === "green")
+    {
+      textCardTwo.style.color = "";
+    }
+    else
+    {
+      textCardTwo.style.color = "green";
+    }
+	})
 }
-editCard2.addEventListener("click", colorGreen);
+greenText()
 console.log("")
+
 //Fonctionnalité 5
 
 //Fonctionnalité 6
